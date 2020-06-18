@@ -1,0 +1,11 @@
+setup.py
+learning_flashcards/__init__.py
+learning_flashcards/app.py
+learning_flashcards/db.py
+learning_flashcards/models.py
+learning_flashcards/views.py
+learning_flashcards.egg-info/PKG-INFO
+learning_flashcards.egg-info/SOURCES.txt
+learning_flashcards.egg-info/dependency_links.txt
+learning_flashcards.egg-info/requires.txt
+learning_flashcards.egg-info/top_level.txt
