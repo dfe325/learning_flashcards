@@ -4,7 +4,8 @@ from sqlalchemy import Column, Integer, String, Date
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
-
+#https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/#install-requirements
+#https://www.twilio.com/blog/build-whatsapp-flashcard-bot-python-flask-twilio
 ''' 
 class BaseModel(db.Model):
 """Base data model for all objects"""
