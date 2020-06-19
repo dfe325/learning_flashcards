@@ -1,5 +1,5 @@
 from flask import Flask
-from models import db
+from .models import db
 
 def create_app():
     app = Flask(__name__)
@@ -9,8 +9,6 @@ def create_app():
     @app.route('/')
     def learning_flashcards():
         return "Hello World!"
-
-
 
     POSTGRES = {
         'user': 'postgres',

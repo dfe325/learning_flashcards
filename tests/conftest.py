@@ -1,5 +1,5 @@
 import pytest
-from learning_flashcards import create_app
+from learning_flashcards.app import create_app
 
 @pytest.fixture
 def app():

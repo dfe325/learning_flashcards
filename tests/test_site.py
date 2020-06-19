@@ -1,7 +1,7 @@
+import pytest
 from learning_flashcards.app import create_app
 
-class TestSite:
-
-    def test_app(client):
-        assert client.get(url_for('myview')).status_code == 200
+@pytest.fixture(autouse=True)
+def test_site(app):
+    assert app.get(url_for('/')).status_code == 200
 
