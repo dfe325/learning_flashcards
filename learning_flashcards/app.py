@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
 from . models import db
+from .commands import create_tables
 
 def create_app():
     app = Flask(__name__)
