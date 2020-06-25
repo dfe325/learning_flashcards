@@ -17,6 +17,7 @@ class Flashcard(db.Model):
     question = db.Column(db.String())
     answer = db.Column(db.String())
     author = db.Column(db.String())
+    created_by_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __init__(self, name, author, published):
         self.name = name
