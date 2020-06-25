@@ -1,13 +1,16 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-from . models import db
 from .commands import create_tables
+from .extensions import db
 
-def create_app():
+def create_app(config_file='settings.py'):
     app = Flask(__name__)
-    app.config.from_object(os.environ['APP_SETTINGS'])
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    app.config.from_pyfile(config_file)
+
+    db.init_app(app)
+
     db = SQLAlchemy(app)
 
     from models import Flashcard
@@ -15,9 +18,6 @@ def create_app():
     @app.route('/')
     def learning_flashcards():
         return "Hello World!"
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
-    db.init_app(app)
 
     app.cli.add_command(create_tables)
 
