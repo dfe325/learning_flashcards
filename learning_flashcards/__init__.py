@@ -22,7 +22,7 @@ def create_app(config_file='settings.py'):
 
     db.init_app(app)
 
-    login_manager.login_view = 'auth.login'
+    #login_manager.login_view = 'auth.login'
 
     app.cli.add_command(create_tables)
 
