@@ -1,7 +1,7 @@
-from sqlalchemy.ext.declarative import declarative_base
+
 from sqlalchemy import Column, Integer, String, Date
 import sqlalchemy
-#from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 #https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/#install-requirements
 #https://www.twilio.com/blog/build-whatsapp-flashcard-bot-python-flask-twilio

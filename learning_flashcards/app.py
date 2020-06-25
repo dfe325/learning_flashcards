@@ -4,14 +4,15 @@ import os
 from .commands import create_tables
 from .extensions import db
 
+
 def create_app(config_file='settings.py'):
-    app = Flask(__name__)
+    #app = Flask(__name__)
 
-    app.config.from_pyfile(config_file)
+    #app.config.from_pyfile(config_file)
 
-    db.init_app(app)
+    #db.init_app(app)
 
-    db = SQLAlchemy(app)
+    #db = SQLAlchemy(app)
 
     from models import Flashcard
 
@@ -20,6 +21,8 @@ def create_app(config_file='settings.py'):
         return "Hello World!"
 
     app.cli.add_command(create_tables)
+    #with app.app_context():
+     #   db.create_all()
 
     return app
 
