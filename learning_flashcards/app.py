@@ -18,6 +18,8 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
     db.init_app(app)
 
+    app.cli.add_command(create_tables)
+
     return app
 
 if __name__ == '__main__':
